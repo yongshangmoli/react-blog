@@ -3,7 +3,7 @@ import request from 'utils/request'
 export function getClassification(params) {
     params = params || {}
     return request({
-        url: '/blog/getClassification',
+        url: '/api/blog/getClassification',
         method: 'get',
         params
     })
@@ -12,7 +12,7 @@ export function getClassification(params) {
 export function addClassification(data) {
     data = data || {}
     return request({
-        url: '/blog/addClassification',
+        url: '/api/blog/addClassification',
         method: 'post',
         data
     })
@@ -21,7 +21,7 @@ export function addClassification(data) {
 export function getTag(params) {
     params = params || {}
     return request({
-        url: '/blog/getTag',
+        url: '/api/blog/getTag',
         method: 'get',
         params
     })
@@ -30,7 +30,7 @@ export function getTag(params) {
 export function addTag(data) {
     data = data || {}
     return request({
-        url: '/blog/addTag',
+        url: '/api/blog/addTag',
         method: 'post',
         data
     })
@@ -39,7 +39,7 @@ export function addTag(data) {
 export function addBlog(data) {
     data = data || {}
     return request({
-        url: '/blog/add',
+        url: '/api/blog/add',
         method: 'post',
         data
     })
@@ -47,7 +47,7 @@ export function addBlog(data) {
 
 export function deleteBlog(id) {
     return request({
-        url: `/blog/delete/${id}`,
+        url: `/api/blog/delete/${id}`,
         method: 'delete'
     })
 }
@@ -55,7 +55,7 @@ export function deleteBlog(id) {
 export function getBlogDetail(params) {
     params = params || {}
     return request({
-        url: `/blog/get/${params.blogId}`,
+        url: `/api/blog/get/${params.blogId}`,
         method: 'get',
         params
     })
@@ -63,7 +63,7 @@ export function getBlogDetail(params) {
 
 export function getBlogList(params) {
     return request({
-        url: `/blog/list`,
+        url: `/api/blog/list`,
         method: 'get',
         params
     })

@@ -54,7 +54,7 @@ const getBlogDetail = (id) => {
 
 let mockApis = [
     {
-        url: '/blog/addClassification',
+        url: '/api/blog/addClassification',
         type: 'post',
         response: config => {
             const { label, value, list } = config.body
@@ -76,7 +76,7 @@ let mockApis = [
         }
     },
     {
-        url: '/blog/getClassification',
+        url: '/api/blog/getClassification',
         type: 'get',
         response: config => {
             return {
@@ -89,7 +89,7 @@ let mockApis = [
         }
     },
     {
-        url: '/blog/addTag',
+        url: '/api/blog/addTag',
         type: 'post',
         response: config => {
             const { value, list } = config.body
@@ -108,7 +108,7 @@ let mockApis = [
         }
     },
     {
-        url: '/blog/getTag',
+        url: '/api/blog/getTag',
         type: 'get',
         response: config => {
             return {
@@ -121,7 +121,7 @@ let mockApis = [
         }
     },
     {
-        url: '/blog/add',
+        url: '/api/blog/add',
         type: 'post',
         response: config => {
             return {
@@ -131,7 +131,7 @@ let mockApis = [
         }   
     },
     {
-        url: '/blog/list',
+        url: '/api/blog/list',
         type: 'get',
         response: config => {
             return {
@@ -143,7 +143,7 @@ let mockApis = [
         }
     },
     {
-        url: '/blog/detail',
+        url: '/api/blog/detail',
         type: 'get',
         response: config => {
             console.log(2222, config)
