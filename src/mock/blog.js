@@ -52,7 +52,7 @@ const getBlogDetail = (id) => {
     })
 }
 
-export default [
+let mockApis = [
     {
         url: '/blog/addClassification',
         type: 'post',
@@ -150,9 +150,10 @@ export default [
             return {
                 code: 0,
                 data: {
-                blog: getBlogDetail(config.body.id || 'ssssssssssssss')
+                    blog: getBlogDetail(config?.body?.id || 'ssssssssssssss')
                 }
             }
         }
     }
 ]
+export default mockApis

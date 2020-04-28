@@ -4,6 +4,9 @@ import './index.css';
 import App from 'main/App';
 import * as serviceWorker from './serviceWorker';
 
+import { mockXHR } from './mock'
+mockXHR()
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
