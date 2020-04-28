@@ -1,8 +1,11 @@
 import axios from 'axios'
+import configs from 'config'
+
+const env = process.env.NODE_ENV
+const BASE_URL = (configs[env]?.BASE_URL) || 'localhost:3000'
 
 const service = axios.create({
-    // baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
-    baseURL: 'localhost:3456',
+    baseURL: BASE_URL,
     withCredentials: true, // send cookies when cross-domain requests
     timeout: 60000 // request timeout
 })

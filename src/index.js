@@ -4,8 +4,15 @@ import './index.css';
 import App from 'main/App';
 import * as serviceWorker from './serviceWorker';
 
-import { mockXHR } from './mock'
-mockXHR()
+const env = process.env.NODE_ENV
+if (env === 'development') {
+  const config = require('config')[env] || {}
+  if (config.useLocalmock) {
+    const { mockXHR } = require('./mock')
+    mockXHR()
+  }
+  // console.log(3333, config)
+}
 
 ReactDOM.render(
   <React.StrictMode>

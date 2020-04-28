@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import logo from 'assets/imgs/logo.svg';
-import { getBlogList } from 'api'
 import './App.css';
+
+import { getBlogList } from 'api'
 class App extends Component {
   async componentWillMount () {
     let res = await getBlogList()
+    console.log(222222, res)
   }
 
   render () {
