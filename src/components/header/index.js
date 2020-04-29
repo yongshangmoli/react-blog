@@ -1,30 +1,20 @@
 import React, { Component } from 'react';
 import './index.less';
 
-import { Carousel } from 'antd'
+import { Carousel } from 'antd';
+import bannerConfig from 'config/banner';
+import Img from './components/img';
 
-// function Img (item) {
-
-// }
-
-class User extends Component {
-  render() {
-    const url = '1.jpg'
+class Header extends Component {
+  render () {
+    const bannerImgs = bannerConfig.bannerImg
+    const list = bannerImgs.map(v => <Img item={v} key={v.url}></Img>)
     return <div className="header">
-      <img className='banner-img' alt="banner图像" src={require(`assets/imgs/${url}`)}></img>
-      <Carousel>
-        <div>
-          <img className='banner-img' alt="banner图像" src={require(`assets/imgs/${url}`)}></img>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
+      <Carousel autoplay>
+        { list }
       </Carousel>
     </div>;
   }
 }
 
-export default User;
+export default Header;

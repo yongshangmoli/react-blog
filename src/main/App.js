@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
 
-import { BrowserRouter, Redirect, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from 'pages/home';
 import Admin from 'pages/admin';
 
-import { getBlogList } from 'api';
 class App extends Component {
-  async componentWillMount () {
-    let res = await getBlogList()
-    console.log(222222, res)
-  }
+  // async componentWillMount () {
+  //   let res = await getBlogList()
+  //   console.log(222222, res)
+  // }
 
   render () {
     return (

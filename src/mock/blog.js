@@ -16,7 +16,7 @@ const tags = ['标签1', '标签2', '标签3']
 
 const blogList = Mock.mock({
     'blogList|10': [{
-        id: '@id',
+        _id: '@id',
         title: '@string(10)',
         classification: {
         'label|1': ['test1', 'test2', 'test3'],
@@ -35,7 +35,7 @@ const blogList = Mock.mock({
 
 const getBlogDetail = (id) => {
     return Mock.mock({
-        id,
+        _id: id,
         title: '@string(10)',
         classification: {
         'label|1': ['test1', 'test2', 'test3'],
@@ -137,13 +137,18 @@ let mockApis = [
             return {
                 code: 0,
                 data: {
-                ...blogList
+                    blogList: blogList.blogList.map((v, idx) => {
+                        return {
+                            ...v,
+                            title: config.query.type + idx
+                        }
+                    })
                 }
             }
         }
     },
     {
-        url: '/api/blog/detail',
+        url: '/api/blog/get/',
         type: 'get',
         response: config => {
             console.log(2222, config)
