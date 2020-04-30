@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 // const { Footer, Sider, Content } = Layout;
 class Admin extends Component {
   render() {
-    
+    console.log(22222, this.props)
     return (
       <div>admoin</div>
     );

@@ -19,8 +19,8 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             {/* <Redirect from="/" to="/timeline" exact /> */}
-            <Route exact path='/' component={Home}></Route>
             <Route path='/admin' component={Admin}></Route>
+            <Route path='/' component={Home}></Route>
           </Switch>
         </BrowserRouter>
       </div>

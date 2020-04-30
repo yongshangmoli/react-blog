@@ -2,14 +2,14 @@ const Mock = require('mockjs')
 
 const classification = [
     {
-      label: '分类1',
-      value: 'class1'
+        label: '分类1',
+        value: 'class1'
     }, {
-      label: '分类2',
-      value: 'class2'
+        label: '分类2',
+        value: 'class2'
     }, {
-      label: '分类3',
-      value: 'class3'
+        label: '分类3',
+        value: 'class3'
     }
 ]
 const tags = ['标签1', '标签2', '标签3']

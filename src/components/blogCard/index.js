@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import './index.less';
 
 import { Card } from 'antd';
@@ -6,7 +7,6 @@ const { Meta } = Card;
 
 
 class BlogCard extends Component {
-
   render() {
     const { title, introduction, updatedTime } = this.props.blog
     return <Card
@@ -19,6 +19,7 @@ class BlogCard extends Component {
           maxHeight: '150px',
           objectFit: 'cover'
         }}/>}
+      onClick={this.props.handleEssayClick}
     >
       <Meta title={title} description={introduction} />
       <div>{ updatedTime }</div>
@@ -26,4 +27,4 @@ class BlogCard extends Component {
   }
 }
 
-export default BlogCard;
+export default withRouter(BlogCard);
