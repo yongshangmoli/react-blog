@@ -3,7 +3,7 @@ import './index.less';
 
 class User extends Component {
   render() {
-    return <div className="header"> User </div>;
+    return <div className="header"> User 1</div>;
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.less';
-import { observer } from 'mobx-react';
+import { observer, Provider } from 'mobx-react';
 import {renderRoutes} from 'react-router-config';
 import { Tabs } from 'antd'; 
 import { tabsConfig } from 'config/body';

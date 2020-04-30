@@ -1,14 +1,14 @@
 export const tabsConfig = [
     {
-        name: '前端技术学习',
-        key: 'front-end'
+        name: '分类1',
+        key: 'class1'
     },
     {
-        name: '生活感悟',
-        key: 'life'
+        name: '分类2',
+        key: 'class2'
     },
     {
-        name: '光影记录',
-        key: 'media'
+        name: '分类3',
+        key: 'class3'
     },
 ]

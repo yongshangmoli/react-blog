@@ -19,8 +19,8 @@ const blogList = Mock.mock({
         _id: '@id',
         title: '@string(10)',
         classification: {
-        'label|1': ['test1', 'test2', 'test3'],
-        value: '@string(3)'
+            'label|1': ['分类1', '分类2', '分类3'],
+            value: ['class1', 'class2', 'class3']
         },
         'label|2': ['published', 'draft'],
         introduction: '@string(100)',
@@ -38,8 +38,8 @@ const getBlogDetail = (id) => {
         _id: id,
         title: '@string(10)',
         classification: {
-        'label|1': ['test1', 'test2', 'test3'],
-        value: '@string(3)'
+            'label|1': ['分类1', '分类2', '分类3'],
+            value: ['class1', 'class2', 'class3']
         },
         'label|2': ['published', 'draft'],
         introduction: '@string(100)',

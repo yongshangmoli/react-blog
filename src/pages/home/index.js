@@ -4,7 +4,7 @@ import './index.less';
 import { renderRoutes } from 'react-router-config'
 import Header from 'components/header';
 
-import UserCard from 'components/userCard';
+// import UserCard from 'components/userCard';
 
 
 class Home extends Component {
@@ -17,7 +17,7 @@ class Home extends Component {
                     this.props.route.routes
                 )
             }
-            <UserCard></UserCard>
+            {/* <UserCard></UserCard> */}
         </div>;
     }
 }
