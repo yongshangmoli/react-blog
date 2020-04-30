@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './essayList.less';
-
 class EssayList extends Component {
 
     render () {

@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './index.less';
-import { observer } from 'mobx-react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
+import { observer } from 'mobx-react';
+import {renderRoutes} from 'react-router-config';
 import { Tabs } from 'antd'; 
 import { tabsConfig } from 'config/body';
-import EssayList from './components/essayList';
-import EssayDetail from './components/essayDetail';
 import { essayListStore } from 'store/essayListStore'
 const { TabPane } = Tabs;
 
@@ -36,22 +33,14 @@ class Body extends Component {
             </TabPane>
         ) 
 
-        const withProps = (Component, props) => {
-            return function(matchProps) {
-              return <Component {...props} {...matchProps} />
-            }
-        }
-
         return <div>
             <Tabs defaultActiveKey={tabsConfig[0]?.key} onChange={this.handleTabsChange}>
                 { tabs }
             </Tabs>
-            <BrowserRouter>
-                <Switch>
-                    <Route path='/blog/detail' component={ EssayDetail }></Route>
-                    <Route path='/blog' component={ withProps(EssayList, {blogList: essayListStore.essayList}) }></Route>
-                </Switch>
-            </BrowserRouter>
+            { renderRoutes(
+                this.props.route.routes,
+                { blogList: essayListStore.essayList })
+            }
         </div>;
     }
 }
