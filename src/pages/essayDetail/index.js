@@ -6,7 +6,7 @@ import { getBlogDetail } from 'api';
 import { tabsConfig } from 'config/body';
 
 @observer
-class EssayList extends Component {
+class EssayDetail extends Component {
     constructor (props) {
         super(props)
         this.state = {
@@ -50,4 +50,4 @@ class EssayList extends Component {
         </div>;
     }
 }
-export default EssayList;
+export default EssayDetail;

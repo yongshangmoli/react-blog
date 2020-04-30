@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import './index.less';
 
 import { Card } from 'antd';
@@ -27,4 +26,4 @@ class BlogCard extends Component {
   }
 }
 
-export default withRouter(BlogCard);
+export default BlogCard
