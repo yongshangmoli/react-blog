@@ -22,13 +22,13 @@ const routes = [
     component: Home,
     routes: [
       {
+        path: "/blog/detail/:id",
+        component: EssayDetail
+      },
+      {
         path: "/blog",
         component: Body,
         routes: [
-          {
-            path: "/blog/detail/:id",
-            component: EssayDetail
-          },
           {
             path: "/blog",
             component: EssayList,
