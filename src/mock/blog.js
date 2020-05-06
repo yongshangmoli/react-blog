@@ -134,15 +134,19 @@ let mockApis = [
         url: '/api/blog/list',
         type: 'get',
         response: config => {
+            console.log(11111, config)
             return {
                 code: 0,
                 data: {
                     blogList: blogList.blogList.map((v, idx) => {
                         return {
                             ...v,
-                            title: config.query.type + idx
+                            title: config.query.type + idx + config.query.page
                         }
-                    })
+                    }),
+                    count: 40,
+                    page: 1,
+                    pageSize: 10,
                 }
             }
         }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.less';
-import { observer, Provider } from 'mobx-react';
+import { observer } from 'mobx-react';
 import {renderRoutes} from 'react-router-config';
 import { Tabs } from 'antd'; 
 import { tabsConfig } from 'config/body';
@@ -31,7 +31,9 @@ class Body extends Component {
         const tabs = tabsConfig.map(v =>
             <TabPane tab={v.name} key={v.key}>
             </TabPane>
-        ) 
+        )
+
+        let { page, pageSize, total } = essayListStore.pageInfo[essayListStore.essayType] || {}
 
         return <div>
             <Tabs defaultActiveKey={tabsConfig[0]?.key} onChange={this.handleTabsChange}>
@@ -39,7 +41,12 @@ class Body extends Component {
             </Tabs>
             { renderRoutes(
                 this.props.route.routes,
-                { blogList: essayListStore.essayList })
+                {
+                    blogList: essayListStore.essayList,
+                    page,
+                    pageSize,
+                    total: total
+                })
             }
         </div>;
     }
